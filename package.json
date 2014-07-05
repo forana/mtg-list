@@ -1,0 +1,23 @@
+{
+  "name": "mtg-list",
+  "version": "1.0.0",
+  "description": "List current Magic the Gathering expansions and cards in them.",
+  "main": "./src/mtg.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alex Foran <alex@alexforan.com> (http://alexforan.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forana/mtg-list.git"
+  },
+  "dependencies": {
+    "request": "2.*",
+    "htmlparser": "1.7.*",
+    "soupselect": "0.2.*",
+    "printf": "0.2.*",
+    "lodash": "2.4.*",
+    "mocha": "1.20.*"
+  }
+}
