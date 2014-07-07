@@ -39,7 +39,7 @@ Each card contains the following properties:
 
 * `number` - The number of the card within the set.
 * `name` - The full name.
-* `type` - The card's type, according to oracle rulings. The power and toughness are tacked on to the end of this, so take care when working with this. (this is because this is how magiccards.info does it)
+* `type` - The card's type, _as printed_.
 * `mana` - The mana cost, or null if it doesn't have one.
 * `rarity` - The rarity, fully spelled out. The possible values are "Common", "Uncommon", "Rare", "Mythic Rare", "Land", and "Special".
 * `artist` - The artist's name.

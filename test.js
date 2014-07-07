@@ -45,6 +45,13 @@ describe("cardsInExpansion", function() {
             done();
         });
     });
+    it("should strip out power/toughness from types", function(done) {
+        mtg.cardsInExpansion("fvd", function(error, cards) {
+            assert(!error);
+            assert.equal(cards[0].type, "Legendary Creature - Zombie Dragon");
+            done();
+        });
+    });
 });
 
 describe("cardImageURL", function() {

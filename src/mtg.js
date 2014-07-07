@@ -75,7 +75,7 @@ module.exports.cardsInExpansion = function(expansion, language, callback) {
                     var card = {
                         number: text[0],
                         name: tds[1].children[0].children[0].data,
-                        type: text[2],
+                        type: filterType(text[2]),
                         mana: text[3],
                         rarity: text[4],
                         artist: text[5]
@@ -87,6 +87,17 @@ module.exports.cardsInExpansion = function(expansion, language, callback) {
             callback(false, cards);
         }
     });
+};
+
+var filterType = function(type) {
+    // replace the dash with a hyphen
+    type = type.replace("—", "-")
+    // strip out power and toughness
+    var r = /^(.+)\s[\*XYZ\+\-0-9]+\/[\*XYZ\+\-0-9+]+$/.exec(type);
+    if (r != null) {
+        type = r[1];
+    }
+    return type;
 };
 
 module.exports.cardImageURL = function(expansion, number, language) {
