@@ -1,3 +1,5 @@
+![image](https://travis-ci.org/forana/mtg-list.svg?branch=master)
+
 # mtg-list
 A node extension for listing out existing Magic the Gathering&trade; (&copy; WotC) expansions and cards.
 
